@@ -1224,6 +1224,14 @@ ul li,
 
 /* EVENTOS Y RETIROS */
 
+.filters {
+  display: inline-flex;
+}
+
+.filters #clear {
+  margin-left: 4rem;
+}
+
 .event-small {
   min-height: 605px;
 }
@@ -1416,6 +1424,15 @@ nav.navigation.post-navigation {
 }
 
 @media (max-width: 560px) {
+  .filters {
+    display: block;
+  }
+  .filters .selector {
+    margin-bottom: 1rem;
+  }
+  .filters #clear {
+    margin-left: 0px;
+  }
   .ms-parent-id-1 h1 {
     font-size: 42px;
   }

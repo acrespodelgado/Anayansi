@@ -70,7 +70,7 @@ endif;
 						seguir tu camino, el verdadero anhelo de tu corazón. Los retiros son una oportunidad para escuchar tu voz interna, y conectar contigo mismo de una forma profunda.', 'understrap-master' ); ?>
 					</p>
 
-					<div class="d-inline-flex">
+					<div class="filters">
 						<div class="selector">
 							<p class="mb-2 brown">Ver por meses</p>
 							<select id="month-selector" class="green">
@@ -93,7 +93,7 @@ endif;
 							</select>
 						</div>
 
-						<button id="clear" class="btn btn-secondary ml-5">Limpiar</button>
+						<button id="clear" class="btn btn-secondary">Limpiar</button>
 					</div>
 
 					<?php if ( $query->have_posts() ) : ?>
@@ -122,6 +122,20 @@ endif;
 							'total'   => $query->max_num_pages,
 						] );
 					?>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid"  id="instagram-feed">
+			<div class="container">
+				<div class="row text-center bitter green">
+					<div class="col-12 block">
+						<div class="inner">
+							<p class="mt-4 font-weight-normal"><?php _e( '¡Síguenos en instagram!', 'understrap-master' ); ?></p>
+							<a class="font-weight-normal" target="_blank" href="https://www.instagram.com/espacioanayansi/"><?php _e( '@espacioanayansi', 'understrap-master' ); ?></a>
+							<?php //echo do_shortcode('[instagram-feed num=4 cols=4 showfollow=false]'); ?>
+							<?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>	
