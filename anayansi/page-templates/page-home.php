@@ -39,9 +39,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="row green bitter text-center" id="square-blocks">
 				<div class="col-md-4">
 					<div class="block">
-						<a href="<?php echo get_site_url();?>/alojamiento-y-naturaleza/" title='<?php _e( 'Ir a Alojamiento y naturaleza', 'understrap-master' ); ?>'>
-							<img class='img-responsive' src='<?php echo get_site_url();?>/img/icon-housing.svg' alt="Icono Alojamiento y naturaleza Anayansi">
-							<h4 class="mt-lg-5 mt-3"><?php _e( 'Alojamiento y naturaleza', 'understrap-master' ); ?></h4>
+						<a href="<?php echo get_site_url();?>/actividad-y-naturaleza/" title='<?php _e( 'Ir a Actividad y naturaleza', 'understrap-master' ); ?>'>
+							<img class='img-responsive' src='<?php echo get_site_url();?>/img/icon-housing.svg' alt="Icono Actividad y naturaleza Anayansi">
+							<h4 class="mt-lg-5 mt-3"><?php _e( 'Actividad y naturaleza', 'understrap-master' ); ?></h4>
 						</a>
 					</div>
 				</div>
@@ -62,6 +62,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 			</div>
+			<?php /*
 			<div class="row green bitter text-center" id="activity-blocks">
 				<div class="col-12 col-md-10 offset-md-1 mb-4">
 					<h4><?php _e( 'Anayansi, un espacio de paz que cuida de tu bienestar.', 'understrap-master' ); ?></h4>
@@ -117,6 +118,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 				</div>
 			</div>
+			*/ ?>
 			<div class="row text-center bitter green" id="contact-banner">
 				<div class="col-md-12 block">
 					<div class="inner">

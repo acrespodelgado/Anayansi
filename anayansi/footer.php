@@ -31,17 +31,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</ul>
 						</div>
 						<div class="col-lg-3 offset-lg-1 col-md-3">
+							<?php /*
 							<ul class="list-unstyled">
 								<li><a href="<?php echo get_site_url();?>/coaching/" title="<?php _e( 'Coaching', 'understrap-master' ); ?>"><?php _e( 'Coaching', 'understrap-master' ); ?></a></li>
 								<li><a href="<?php echo get_site_url();?>/mindfulness-y-autocompasion/" title="<?php _e( 'Mindfulness y Autocompasión', 'understrap-master' ); ?>"><?php _e( 'Mindfulness y Autocompasión', 'understrap-master' ); ?></a></li>
 								<li><a href="<?php echo get_site_url();?>/hatha-yoga/" title="<?php _e( 'Hatha Yoga', 'understrap-master' ); ?>"><?php _e( 'Hatha Yoga', 'understrap-master' ); ?></a></li>
 								<li><a href="<?php echo get_site_url();?>/chamanismo/" title="<?php _e( 'Chamanismo', 'understrap-master' ); ?>"><?php _e( 'Chamanismo', 'understrap-master' ); ?></a></li>
 							</ul>
+							*/ ?>
 						</div>
 						<div class="col-lg-3 col-md-3">
 							<ul class="list-unstyled">
-								<li><a href="<?php echo get_site_url();?>/alojamiento-y-naturaleza/" title="<?php _e( 'Alojamiento y naturaleza', 'understrap-master' ); ?>"><?php _e( 'Alojamiento y naturaleza', 'understrap-master' ); ?></a></li>
-								<li><a href="<?php echo get_site_url();?>" title="<?php _e( 'Actividades para el bienestar', 'understrap-master' ); ?>"><?php _e( 'Actividades para el bienestar', 'understrap-master' ); ?></a></li>
+								<li><a href="<?php echo get_site_url();?>/actividad-y-naturaleza/" title="<?php _e( 'Actividad y naturaleza', 'understrap-master' ); ?>"><?php _e( 'Actividad y naturaleza', 'understrap-master' ); ?></a></li>
+								<?php /* <li><a href="<?php echo get_site_url();?>" title="<?php _e( 'Actividades para el bienestar', 'understrap-master' ); ?>"><?php _e( 'Actividades para el bienestar', 'understrap-master' ); ?></a></li> */ ?>
 								<li><a href="<?php echo get_site_url();?>/eventos-y-retiros/" title="<?php _e( 'Eventos y retiros', 'understrap-master' ); ?>"><?php _e( 'Eventos y retiros', 'understrap-master' ); ?></a></li>
 							</ul>
 						</div>

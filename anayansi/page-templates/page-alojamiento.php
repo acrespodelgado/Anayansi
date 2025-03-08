@@ -24,16 +24,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="container green" id="content">
 			<div class="row">
 				<div class="col-lg-6 col-md-12 text-lg-left text-center">
-					<h3 class="mb-4"><?php _e( 'Alojamiento Oasis de Anayansi', 'understrap-master' ); ?></h3>
+					<h3 class="mb-4"><?php _e( 'Nuestras instalaciones', 'understrap-master' ); ?></h3>
 					<p class="big brown"><?php _e( 'Un espacio natural en Vejer de la Frontera donde realizar retiros o vacaciones para tu bienestar, respirar y desconectar.', 'understrap-master' ); ?></p>
-					<p class="big brown"><?php _e( 'El lugar es una finca rodeada de arboleda compuesta de pinos piñoneros, acebuches, chaparros y campos de cultivo. Tiene 5 hectáreas, 4 de ellas totalmente 
-						silvestres y entregadas a la Madre Tierra. Allí puedes pasear, descansar en la naturaleza, escuchar el sonido de los pájaros, contemplar la vegetación autóctona...
-						y darte un buen baño de bosque.', 'understrap-master' ); ?></p>
-					<p class="big brown"><?php _e( 'Existe una piscina de arena, con rocallas y agua salada, rodeada de césped natural que embellece el entorno y da protagonismo al elemento agua. 
-					Ideal para darse un buen baño.', 'understrap-master' ); ?></p>
+					<p class="big brown"><?php _e( 'El lugar es una finca rodeada de arboleda compuesta de pinos piñoneros, acebuches, chaparros y campos de cultivo. Tiene 5 hectáreas, 4 de ellas totalmente silvestres y 
+					entregadas a la Madre Tierra. Allí puedes pasear, descansar en la naturaleza, escuchar el sonido de los pájaros, contemplar la vegetación autóctona... y darte un buen baño de bosque.', 'understrap-master' ); ?></p>
+					<p class="big brown"><?php _e( 'Existe una piscina de arena, con rocallas y agua salada, rodeada de césped natural que embellece el entorno y da protagonismo al elemento agua. Ideal para darse un buen baño.', 'understrap-master' ); ?></p>
 				</div>
 				<div class="col-lg-6 col-md-12">
-					<img class='img-responsive' src='<?php echo get_site_url();?>/img/alojamiento-1-new.jpg' alt='<?php _e( 'Centro Anayansi Imagen 1', 'understrap-master' ); ?>'>
+					<img class='img-responsive mb-2' src='<?php echo get_site_url();?>/img/alojamiento-1-new.jpg' alt='<?php _e( 'Centro Anayansi Imagen 1', 'understrap-master' ); ?>'>
+					<!--<img class='img-responsive' src='<?php echo get_site_url();?>/img/alojamiento-4-new.jpg' alt='<?php _e( 'Centro Anayansi Imagen 4', 'understrap-master' ); ?>'>-->
 				</div>
 			</div>
 		</div>
@@ -44,75 +43,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="container">
 							<div class="row space">
 								<div class="col-12">
-									<div class="row align-center">
-										<div class="col-12 col-md-6 col-lg-4">
-											<ul class="brown">
-												<li><p class="big brown font-weight-normal"><?php _e( 'Cabañas de madera (habitaciones dobles con baño privado). Se ha buscado un diseño integrador con la naturaleza, creando un espacio con mucho encanto.', 'understrap-master' ); ?></p></li>
-											</ul>
-										</div>
-										<div class="col-12 col-md-6 col-lg-8">
-											<?php echo do_shortcode('[iheu_ultimate_oxi  id="2"]'); ?>
-										</div>
-									</div>
-									<div class="row align-center">
-										<div class="col-12 col-md-6 col-lg-4">
-											<ul class="brown">
-												<li><p class="big brown font-weight-normal"><?php _e( '2 Habitaciones familiares (habitaciones, tipo albergue, con tres literas cada una y baño exterior).', 'understrap-master' ); ?></p></li>
-											</ul>
-										</div>
-										<div class="col-12 col-md-6 col-lg-8">
-											<?php echo do_shortcode('[iheu_ultimate_oxi  id="3"]'); ?>
-										</div>
-									</div>
-									<div class="row align-center">
-										<div class="col-12 col-md-6 col-lg-4">
-											<ul class="brown">
-												<li><p class="big brown font-weight-normal"><?php _e( 'Tipi indio (con dos camas y baño privado exterior). Disponible solo en verano. Una experiencia única, dormir en un autentico tipi indio.', 'understrap-master' ); ?></p></li>
-											</ul>
-										</div>
-										<div class="col-12 col-md-6 col-lg-8">
-											<?php echo do_shortcode('[iheu_ultimate_oxi  id="4"]'); ?>
-										</div>
-									</div>
-										<?php /*
-										<div class="col-12 col-md-3 col-lg-4">
-											<div class="overflow-img">
-												<img class='w-100 mt-2' src='<?php echo get_site_url();?>/img/alojamiento-2-new.jpg' alt='<?php _e( 'Centro Anayansi Imagen 2', 'understrap-master' ); ?>'>
-											</div>
-											<div class="overflow-img">
-												<img class='w-100 mt-2' src='<?php echo get_site_url();?>/img/alojamiento-3-new.jpg' alt='<?php _e( 'Centro Anayansi Imagen 3', 'understrap-master' ); ?>'>
-											</div>
-											<div class="overflow-img">
-												<img class='w-100 mt-2' src='<?php echo get_site_url();?>/img/alojamiento-4-new.jpg' alt='<?php _e( 'Centro Anayansi Imagen 4', 'understrap-master' ); ?>'>
-											</div>
-										</div>
-										<div class="col-12 col-md-3 col-lg-4">
-											<div class="overflow-img">
-												<img class='w-100 mt-2' src='<?php echo get_site_url();?>/img/alojamiento-5-new.jpg' alt='<?php _e( 'Centro Anayansi Imagen 5', 'understrap-master' ); ?>'>
-											</div>
-											<div class="overflow-img">
-												<img class='w-100 mt-2' src='<?php echo get_site_url();?>/img/alojamiento-6-new.jpg' alt='<?php _e( 'Centro Anayansi Imagen 6', 'understrap-master' ); ?>'>
-											</div>
-											<div class="overflow-img">
-												<img class='w-100 mt-2' src='<?php echo get_site_url();?>/img/alojamiento-7-new.jpg' alt='<?php _e( 'Centro Anayansi Imagen 7', 'understrap-master' ); ?>'>
-											</div>
-										</div> */ ?>
-								</div>
-							</div>
-							<div class="row space">
-								<div class="col-12">
 									<p class="big brown font-weight-normal"><?php _e( 'Zonas comunes:', 'understrap-master' ); ?></p>
 									<div class="row">
 										<div class="col-12 col-md-5">
 											<ul class="brown">
 												<li><p class="big brown font-weight-normal"><?php _e( 'Sala para talleres y retiros, de 90 m2 diáfanos. Equipada con aire acondicionado, suelo de parquet, estufa de pellet, equipo de música y vistas a la naturaleza.', 'understrap-master' ); ?></p></li>
-												<li><p class="big brown font-weight-normal"><?php _e( 'Comedor con cocina.', 'understrap-master' ); ?></p></li>
+												<li><p class="big brown font-weight-normal"><?php _e( 'Un tipi, de unos 39 m2, como complemento a las actividades de la sala.', 'understrap-master' ); ?></p></li>
+												<li><p class="big brown font-weight-normal"><?php _e( 'Comedor.', 'understrap-master' ); ?></p></li>
+												<li><p class="big brown font-weight-normal"><?php _e( 'Cocina.', 'understrap-master' ); ?></p></li>
 												<li><p class="big brown font-weight-normal"><?php _e( 'Jardín exterior, equipado con mesas y sillas, bajo la sombra de un maravilloso pinar.', 'understrap-master' ); ?></p></li>
 												<li><p class="big brown font-weight-normal"><?php _e( 'Piscina Oasis de agua salada, rodeada de césped natural.', 'understrap-master' ); ?></p></li>
 											</ul>
 										</div>
 										<div class="col-12 col-md-7">
-											<img class='img-responsive' src='<?php echo get_site_url();?>/wp-content/uploads/2020/09/Anayansi_galeria8.jpg' alt='<?php _e( 'Centro Anayansi Imagen 8', 'understrap-master' ); ?>'>
+											<img class='img-responsive mb-2' src='<?php echo get_site_url();?>/wp-content/uploads/2020/09/Anayansi_galeria8.jpg' alt='<?php _e( 'Centro Anayansi Imagen 8', 'understrap-master' ); ?>'>
+											<img class='img-responsive mb-2' src='<?php echo get_site_url();?>/img/alojamiento-3-new.jpg' alt='<?php _e( 'Centro Anayansi Imagen 3', 'understrap-master' ); ?>'>
+											<img class='img-responsive mb-2' src='<?php echo get_site_url();?>/img/alojamiento-comedor-new.jpg' alt='<?php _e( 'Centro Anayansi Imagen Comedor', 'understrap-master' ); ?>'>
+											<img class='img-responsive mb-2' src='<?php echo get_site_url();?>/img/alojamiento-2-new.jpg' alt='<?php _e( 'Centro Anayansi Imagen 2', 'understrap-master' ); ?>'>
 										</div>
 									</div>
 								</div>
@@ -130,7 +77,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 									</div>
 									
 									<a href="<?php echo get_site_url();?>/contacto/" class="btn w-100 no-radius mt-lg-5 mt-3" title="<?php _e( 'Contactar con Anayansi', 'understrap-master' ); ?>">
-										<?php _e( 'Me interesa alojarme en Anayansi', 'understrap-master' ); ?>
+										<?php _e( 'Me interesan las instalaciones de Anayansi', 'understrap-master' ); ?>
 									</a>
 								</div>
 							</div>
