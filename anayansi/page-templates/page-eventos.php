@@ -17,43 +17,62 @@ $container = get_theme_mod( 'understrap_container_type' );
 global $paged;
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
+$args_paged = array(
+    'post_type' => 'eventos-y-retiros',
+    'posts_per_page' => 4,
+    'paged' => $paged,
+    //'orderby' => 'meta_value_num',
+    //'meta_key' => 'wpcf-fecha_calendario',
+	'orderby' => 'date',
+    'order' => 'DESC'
+);
+
 $args = array(
-	'post_type' => 'eventos-y-retiros',
-	'posts_per_page' => 4,
-	'paged' => $paged,
+    'post_type' => 'eventos-y-retiros',
+    'posts_per_page' => -1,
+    'paged' => $paged,
+	//'orderby' => 'meta_value_num',
+    //'meta_key' => 'wpcf-fecha_calendario',
 	'orderby' => 'date',
-	'order' => 'DESC'
+    'order' => 'DESC'
 );
 
-$args2 = array(
-	'post_type' => 'eventos-y-retiros',
-	'posts_per_page' => -1,
-	'paged' => $paged,
-	'orderby' => 'date',
-	'order' => 'DESC'
-);
+$query = new WP_Query($args);
+$query_paged = new WP_Query($args_paged);
+$wp_query = $query_paged;
 
-$query = new WP_Query( $args );
-$query2 = new WP_Query( $args2 );
-$wp_query = $query;
+setlocale(LC_TIME, 'es_ES.UTF-8'); // Establecer el locale a español
 
-?>
-
-<?php
 $datesM = array(); 
 $datesY = array(); 
-if ( $query2->have_posts() ) : 
-	while ( $query2->have_posts() ) : $query2->the_post();
-		$date = get_the_date('n F'); 
-		if ( !in_array( $date, $datesM ) ) :
-			$datesM[] = $date;
-		endif;
-		$date = get_the_date('Y'); 
-		if ( !in_array( $date, $datesY ) ) :
-			$datesY[] = $date;
-		endif;
-	endwhile;
+
+if ($query->have_posts()) : 
+    while ($query->have_posts()) : $query->the_post();
+        // Obtener el valor del campo personalizado 'fecha_calendario'
+        $date = get_post_meta(get_the_ID(), 'wpcf-fecha_calendario', true);
+        if (empty($date)) {
+            $date = get_the_date('U');
+        }
+        
+        $timestamp = $date;
+        $formatted_date = strftime('%B', $timestamp); // Formatear la fecha en español
+		$month_number = date('n', $timestamp);
+        
+        // Insertar en la posición correcta dentro del array $datesM
+        if (!array_key_exists($month_number, $datesM)) {
+            $datesM[$month_number] = $formatted_date;
+        }
+        
+        $year = date('Y', $timestamp); 
+        if (!in_array($year, $datesY)) {
+            $datesY[] = $year;
+        }
+    endwhile;
 endif;
+
+ksort($datesM);
+sort($datesY);
+
 ?>
 
 <div class="wrapper" id="full-width-page-wrapper">
@@ -70,14 +89,13 @@ endif;
 						seguir tu camino, el verdadero anhelo de tu corazón. Los retiros son una oportunidad para escuchar tu voz interna, y conectar contigo mismo de una forma profunda.', 'understrap-master' ); ?>
 					</p>
 
-					<div class="d-inline-flex">
+					<div class="filters">
 						<div class="selector">
 							<p class="mb-2 brown">Ver por meses</p>
 							<select id="month-selector" class="green">
 								<option value="0">Seleccione un mes</option>
-								<?php foreach ( $datesM as $month ) : ?>
-									<?php $month_splited = explode(" ", $month); ?>
-									<option value="<?php echo $month_splited[0]; ?>"><?php echo $month_splited[1]; ?></option>
+								<?php foreach ($datesM as $month_number => $month_name) : ?>
+									<option value="<?php echo $month_number; ?>"><?php echo ucfirst($month_name); ?></option>
 								<?php endforeach; ?>
 							</select>
 						</div>
@@ -93,13 +111,13 @@ endif;
 							</select>
 						</div>
 
-						<button id="clear" class="btn btn-secondary ml-5">Limpiar</button>
+						<button id="clear" class="btn btn-secondary">Limpiar</button>
 					</div>
 
-					<?php if ( $query->have_posts() ) : ?>
+					<?php if ( $query_paged->have_posts() ) : ?>
 						<?php $iteration = 0; ?>
 						<div class="row mt-5 row-posts">
-							<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+							<?php while ( $query_paged->have_posts() ) : $query_paged->the_post(); ?>
 								<?php if ( $iteration == 0 ) : ?>
 									<div class="col-12 post post-large">
 										<?php get_template_part( 'loop-templates/content-eventos-y-retiros-large', get_post_format() ); ?>	
@@ -119,7 +137,7 @@ endif;
 					<?php
 						understrap_pagination( [
 							'current' => $paged,
-							'total'   => $query->max_num_pages,
+							'total'   => $query_paged->max_num_pages,
 						] );
 					?>
 				</div>
