@@ -42,7 +42,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</div>
 						<div class="col-lg-3 col-md-3">
 							<ul class="list-unstyled">
-								<li><a href="<?php echo get_site_url();?>/actividad-y-naturaleza/" title="<?php _e( 'Actividad y naturaleza', 'understrap-master' ); ?>"><?php _e( 'Actividad y naturaleza', 'understrap-master' ); ?></a></li>
+								<li><a href="<?php echo get_site_url();?>/nuestras-instalaciones/" title="<?php _e( 'Nuestras Instalaciones', 'understrap-master' ); ?>"><?php _e( 'Nuestras Instalaciones', 'understrap-master' ); ?></a></li>
 								<?php /* <li><a href="<?php echo get_site_url();?>" title="<?php _e( 'Actividades para el bienestar', 'understrap-master' ); ?>"><?php _e( 'Actividades para el bienestar', 'understrap-master' ); ?></a></li> */ ?>
 								<li><a href="<?php echo get_site_url();?>/eventos-y-retiros/" title="<?php _e( 'Eventos y retiros', 'understrap-master' ); ?>"><?php _e( 'Eventos y retiros', 'understrap-master' ); ?></a></li>
 							</ul>

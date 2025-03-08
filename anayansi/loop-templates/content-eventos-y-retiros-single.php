@@ -65,8 +65,11 @@
 				<?php endif; ?>
 				</p>
 			<?php endif; ?>
+			<?php /* 
+			No necesario el mail ni web temporalmente deshabilitado
 			<p><?php _e( 'centro.anayansi@gmail.com', 'understrap-master' ); ?></p>
 			<p><?php _e( 'www.centroanayansi.es', 'understrap-master' ); ?></p>
+			*/ ?>
 		</div>
 		<?php if(types_render_field('telefono')) : ?>
 			<a class="btn btn-secondary no-radius w-100" href="tel:<?php echo(types_render_field('telefono')); ?>">

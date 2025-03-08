@@ -37,14 +37,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 				</div><!-- #primary -->
 			</div><!-- .row end -->
 			<div class="row green bitter text-center" id="square-blocks">
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<div class="block">
-						<a href="<?php echo get_site_url();?>/actividad-y-naturaleza/" title='<?php _e( 'Ir a Actividad y naturaleza', 'understrap-master' ); ?>'>
-							<img class='img-responsive' src='<?php echo get_site_url();?>/img/icon-housing.svg' alt="Icono Actividad y naturaleza Anayansi">
-							<h4 class="mt-lg-5 mt-3"><?php _e( 'Actividad y naturaleza', 'understrap-master' ); ?></h4>
+						<a href="<?php echo get_site_url();?>/nuestras-instalaciones/" title='<?php _e( 'Ir a Nuestras Instalaciones', 'understrap-master' ); ?>'>
+							<img class='img-responsive' src='<?php echo get_site_url();?>/img/icon-housing.svg' alt="Icono Nuestras Instalaciones">
+							<h4 class="mt-lg-5 mt-3"><?php _e( 'Nuestras Instalaciones', 'understrap-master' ); ?></h4>
 						</a>
 					</div>
 				</div>
+				<?php /* Oculto temporalmente
 				<div class="col-md-4">
 					<div class="block">
 						<a href="<?php echo get_site_url();?>/actividades-para-el-bienestar/" title='<?php _e( 'Ir a Actividades para el bienestar', 'understrap-master' ); ?>'>
@@ -53,11 +54,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</a>
 					</div>
 				</div>
-				<div class="col-md-4">
+				*/ ?>
+				<div class="col-md-6">
 					<div class="block">
-						<a href="<?php echo get_site_url();?>/eventos/" title='<?php _e( 'Ir a retiros y eventos', 'understrap-master' ); ?>'>
+						<a href="<?php echo get_site_url();?>/eventos/" title='<?php _e( 'Ir a eventos y retiros', 'understrap-master' ); ?>'>
 							<img class='img-responsive' src='<?php echo get_site_url();?>/img/icon-tipi.svg' alt="Icono eventos">
-							<h4 class="mt-lg-5 mt-3"><?php _e( 'Retiros y Eventos', 'understrap-master' ); ?></h4>
+							<h4 class="mt-lg-5 mt-3"><?php _e( 'Eventos y Retiros', 'understrap-master' ); ?></h4>
 						</a>
 					</div>
 				</div>

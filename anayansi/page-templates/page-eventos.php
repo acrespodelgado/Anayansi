@@ -70,7 +70,7 @@ endif;
 						seguir tu camino, el verdadero anhelo de tu corazón. Los retiros son una oportunidad para escuchar tu voz interna, y conectar contigo mismo de una forma profunda.', 'understrap-master' ); ?>
 					</p>
 
-					<div class="filters">
+					<div class="d-inline-flex">
 						<div class="selector">
 							<p class="mb-2 brown">Ver por meses</p>
 							<select id="month-selector" class="green">
@@ -93,7 +93,7 @@ endif;
 							</select>
 						</div>
 
-						<button id="clear" class="btn btn-secondary">Limpiar</button>
+						<button id="clear" class="btn btn-secondary ml-5">Limpiar</button>
 					</div>
 
 					<?php if ( $query->have_posts() ) : ?>
